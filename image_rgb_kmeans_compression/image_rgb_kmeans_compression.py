@@ -42,7 +42,7 @@ def main():
             rgb_image_array[i][j] = [image_array[i][j][0],image_array[i][j][1], image_array[i][j][2]]
 
 
-    # (deterministic order of) rbg vectors
+    # (deterministic order of) rgb vectors
     rgb_vectors = [rgb_image_array[i][j] for i in range(len(rgb_image_array)) for j in range(len(rgb_image_array[0]))]
     assert len(rgb_vectors) == (len(rgb_image_array) * len(rgb_image_array[0]))
 
@@ -54,7 +54,7 @@ def main():
     
     print(f'RGB k-clusters:\n {cluster_centers}')
 
-    # transform original rbg image array values to k-cluster rbg values
+    # transform original rgb image array values to k-cluster rbg values
     transf_rgb_image_array = np.zeros((int(len(image_array)), int(len(image_array[0])), 3))
     n = len(rgb_image_array[0])
     for i in range(len(transf_rgb_image_array)):
