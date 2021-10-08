@@ -18,14 +18,26 @@ python image_rgb_kmeans_compression.py <image file> -k <>
 
 ## Example
 
+**Original Image**
+
+![orig](./images/git_push.png)
+
 **k=2**
 
-![k2](./imiages/git_push_2colors_transf.png)
+![k2](./images/git_push_2colors_transf.png)
 
 **k=4**
 
+![k4](./images/git_push_4colors_transf.png)
+
 **k=10**
 
+![k10](./images/git_push_10colors_transf.png)
+
+
 **k=100**
+
+![k100](./images/git_push_100colors_transf.png)
+
 
 **k=1000**
