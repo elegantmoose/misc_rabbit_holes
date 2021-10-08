@@ -35,8 +35,7 @@ def main():
     image = Image.open(args.image_fp)
     image_array = np.array(image)
     
-    # stripping alpha (pixel transparency) and putting image array into
-    # easier accesible dict
+    # stripping alpha (pixel transparency)
     rgb_image_array = np.zeros((int(len(image_array)), int(len(image_array[0])), 3))
     for i in range(len(image_array)):
         for j in range(len(image_array[0])):
@@ -56,7 +55,6 @@ def main():
     print(f'RGB k-clusters:\n {cluster_centers}')
 
     # transform original rbg image array values to k-cluster rbg values
-    # and convert rgb dict back to np array
     transf_rgb_image_array = np.zeros((int(len(image_array)), int(len(image_array[0])), 3))
     n = len(rgb_image_array[0])
     for i in range(len(transf_rgb_image_array)):
@@ -65,8 +63,10 @@ def main():
             k_class = kmeans.labels_[column_major_index]
             transf_rgb_image_array[i][j] = cluster_centers[k_class]
 
-    # convert accessible easier rgb dict back to rgb array
+    # convert back to rgb array
     transf_image = Image.fromarray((transf_rgb_image_array * 255).astype(np.uint8))
+    
+    # Dump
     filename, ext = args.image_fp.split('.')
     transf_image.save(f'{filename}_{args.k_colors}colors_transf.{ext}')
 
