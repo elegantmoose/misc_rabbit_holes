@@ -41,3 +41,5 @@ python image_rgb_kmeans_compression.py <image file> -k <>
 
 
 **k=1000 (1000 colors)**
+
+![k1000](./images/git_push_1000colors_transf.png)
