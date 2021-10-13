@@ -64,7 +64,8 @@ def main():
             transf_rgb_image_array[i][j] = cluster_centers[k_class]
 
     # convert back to rgb array
-    transf_image = Image.fromarray((transf_rgb_image_array * 255).astype(np.uint8))
+    transf_image = Image.fromarray((transf_rgb_image_array).astype(np.uint8))
+    #transf_image = Image.fromarray((transf_rgb_image_array * 255).astype(np.uint8))
     
     # Dump
     filename, ext = args.image_fp.split('.')
