@@ -257,7 +257,6 @@ def print_minimax_tree(graph):
         print(neighbors)
 
 
-
 def print_board_layout():
     print("--Board layout--")
     print('   0  3  6')
