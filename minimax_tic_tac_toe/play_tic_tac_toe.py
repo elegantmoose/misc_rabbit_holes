@@ -1,3 +1,9 @@
+"""
+A basic MiniMax and AB-Prune implementation for Tic-Tac-Toe w/ verbose terminal output.
+
+@author elegantmoose
+"""
+
 import argparse
 from os import stat
 import networkx as nx
