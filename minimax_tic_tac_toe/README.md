@@ -3,7 +3,7 @@
 ## Usage
 
 ```sh
-python play tic_tac_toe.py --ai <> --stats <bool>
+python play tic_tac_toe.py --ai <algo> --stats
 ```
 
 `ai`: algorithm for adversary, Options include: "minimax", "mimimax-ab-prune'
