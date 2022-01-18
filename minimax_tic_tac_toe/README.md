@@ -2,9 +2,9 @@
 
 ## Usage
 
-``sh
+```sh
 python play tic_tac_toe.py --ai <> --stats <bool>
-``
+```
 
 `ai`: algorithm for adversary, Options include: "minimax", "mimimax-ab-prune'
 
