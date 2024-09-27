@@ -171,7 +171,6 @@ def color_best_states(graph):
 
     node_color_map = []
     for node_id in graph.nodes():
-
         if node_id in best:
             node_color_map.append("green")
         else:
